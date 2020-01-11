@@ -20,7 +20,7 @@ The data has been identified with my setup manually an covers:
 * Charge pump speed
 * Compressor on/off
 
-There are currently 20 more columns in the csv files which are not identified, although unknown_20 resembles the 
+There are currently 20 more columns in the csv files which are not identified, although unknown_19 resembles the 
 outdoor temperature quite good. I have uploaded one of my csv files for reference: [20200101.CSV](./resources/20200101.CSV)
 
 # How to use
