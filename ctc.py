@@ -95,7 +95,7 @@ def read_csv(file, tz):
                    33: 'Compressor'  # on/off [-]
                    }
 
-    df = pd.read_csv(file, header=None, index_col=0, parse_dates=True, error_bad_lines=False)
+    df = pd.read_csv(file, header=None, index_col=0, parse_dates=True, usecols=[i for i in range(34)])
     df.index = df.index.tz_localize(tz, ambiguous='NaT')
     df = df.loc[df.index.notnull()]
     df = df.loc[~df.index.duplicated(keep='first')]
