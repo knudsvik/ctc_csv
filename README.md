@@ -36,12 +36,21 @@ As far as I have seen the flash drive can be removed and added without having to
 
 Prerequisites:
 * Python (with pandas, numpy and influxdb) installed
-* Running Influxdb instance with a database called 'ctc'
+* Running Influxdb instance with a database (v1.x) or bucket (v2.x) called 'ctc'
 
-Instructions:
-1. Download the ctc.py file to a directory on your computer
-2. Change following parameters in the start of the ctc.py file to accomodate your setup:
+Instructions for influxdb version 1.x:
+1. Download the ctc_v1.py file to a directory on your computer
+2. Change following parameters in the start of the ctc_v1.py file to accomodate your setup:
     * Timezone, default is 'CET'
     * Influxdb parameters (user/pass and optionally host/port/dbname)
 3. Copy some csv files from the flash drive to the directory where the ctc.py file is
-3. Run the script with following command from the directory: `python ctc.py`
+4. Run the script with following command from the directory: `python ctc_v1.py`
+
+Instructions for influxdb version 2.x:
+1. Create an API token with write access to the influxdb bucket 
+2. Download the ctc_v2.py file to a directory on your computer
+3. Change following parameters in the start of the ctc_v2.py file to accomodate your setup:
+    * Timezone, default is 'CET'
+    * Influxdb parameters (url, token, org, optionally bucket)
+4. Copy some csv files from the flash drive to the directory where the ctc.py file is
+5. Run the script with following command from the directory: `python ctc_v2.py`
