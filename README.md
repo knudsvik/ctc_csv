@@ -4,11 +4,17 @@ Parses CTC EcoZenith Heater CSV files for input to an influxdb database. I use G
 
 ![](./resources/ctc_grafana.gif)
 
-The script will find all csv files in a directory and parse the data, label it, making it timezone aware and push it to 
-an influxdb database before deleting the csv files. It has only been tested with my own setup which consist of a 
+The script will find all csv files in a directory and parse the data, making it timezone aware and push it to 
+an influxdb database before deleting the csv files. My initial setup (old display) created unlabeled csv files and I had to guess what the data was based on observations. After buying a new display in 2022 (to hook up Modbus) I discovered that the csv files now created is labeled, thus making this process much better. 
+
+It has only been tested with my own setup which consist of a 
 CTC EcoZenith i250 immersion heater, CTC EcoAir 400 heat pump and one flow loop of underfloor heating.
 
-The data has been identified with my setup manually an covers:
+### Labeled CSV files
+All data are labeled in the second row of the csv file. One of my csv files has been uploaded for reference: [20221021.csv](./resources/20221021.csv)
+
+### Unlabeled CSV files
+The data has been identified based on observations:
 * Tank upper temperature
 * Tank lower temperature
 * Primary flow 1 temperature
@@ -53,4 +59,8 @@ Instructions for influxdb version 2.x:
     * Timezone, default is 'CET'
     * Influxdb parameters (url, token, org, optionally bucket)
 4. Copy some csv files from the flash drive to the directory where the ctc.py file is
-5. Run the script with following command from the directory: `python ctc_v2.py`
+5. Run the script with one of the two following commands from the directory (based on your setup):
+    Alt.1: For the old type of display without named columns in the csv: `python ctc_v2.py`
+    Alt.2: For the new type of display with labeled csv: `python ctc_v2_new.py`
+
+Instructions for influxdb version 2.x and new type of display
