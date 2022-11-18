@@ -1,5 +1,7 @@
 # CTC CSV
 
+[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
+
 Parses CTC EcoZenith Heater CSV files for input to an influxdb database. I use Grafana for visualizing the heater data:
 
 ![](./resources/ctc_grafana.gif)
@@ -64,3 +66,8 @@ Instructions for influxdb version 2.x:
     Alt.2: For the new type of display with labeled csv: `python ctc_v2_new.py`
 
 Instructions for influxdb version 2.x and new type of display
+
+***
+
+[buymecoffee]: https://www.buymeacoffee.com/tvtX
+[buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
