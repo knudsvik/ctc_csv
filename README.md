@@ -69,5 +69,5 @@ Instructions for influxdb version 2.x and new type of display
 
 ***
 
-[buymecoffee]: https://www.buymeacoffee.com/tvtX
+[buymecoffee]: https://www.buymeacoffee.com/knudsvik
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
